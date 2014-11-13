@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+#navheader {
+  background-color: #4741DA;
+}
+.content {
+  padding: 20px;
+  margin: 20px;
+}

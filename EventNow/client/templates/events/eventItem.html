@@ -1,0 +1,9 @@
+<template name="eventItem">
+	<div class="event">
+		<div class="event-content">
+			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+		</div>
+		<paper-button raised><core-icon icon="check"></core-icon>
+  		<a href="{{pathFor 'eventDetails'}}">Join in</a></paper-button>
+	</div>
+</template>

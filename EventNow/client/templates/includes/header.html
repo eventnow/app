@@ -1,0 +1,18 @@
+<template name="header">
+<core-header-panel navigation flex mode="seamed">
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+    <core-menu>
+
+      <core-icon icon="home"></core-icon>
+      <core-item label="Home"><a href="{{pathFor 'eventList'}}"></a></core-item>
+
+      <core-item label="About"></core-item>
+    
+    </core-menu>
+    
+    
+  </core-header-panel>
+  {{> loginButtons}}
+</template>
