@@ -1,0 +1,28 @@
+<template name="account_system"> 
+	 {{> alert}}
+   
+        {{#unless currentUser}}
+                {{> signIn}}           
+        {{else}}
+            {{> signOut}}
+        {{/unless}}
+</template>
+
+
+<!--
+
+        {{> alert}}
+    {{#unless resetPassword}}
+        {{#unless currentUser}}
+            {{#unless showForgotPassword}}
+                {{> signIn}}
+                {{> signUp}}
+            {{else}}
+                {{> forgotPassword}}
+            {{/unless}}
+        {{else}}
+            {{> signOut}}
+        {{/unless}}
+    {{else}}
+        {{> resetPassword}}
+    {{/unless}} -->

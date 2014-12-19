@@ -1,10 +1,54 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
+
 }
-#navheader {
-  background-color: #4741DA;
+core-header-panel {
+  background: #FFF176;
+}
+core-toolbar {
+  background-color: #00BCD4;
+}
+#navheader{
+	background-color: #FFEB3B;
 }
 .content {
-  padding: 20px;
+  font-size: 12px;
+  background-color: #E3F2FD;
+
+}
+.event{
+  overflow: auto;
+	background-color: #FAFAFA;
+	padding: 10px;
+  height: 20%;
+  border-bottom: solid #9E9E9E 1px;
+}
+
+.eventimg {
+  float: left;
+}
+
+.join-btn {
+  float: right;
+} 
+
+.event-content {
+  font-size: 14px;
+}
+.signIn {
   margin: 20px;
+}
+core-drawer-panel:not([narrow]) #navicon {
+  display: none;
+}
+
+ html /deep/ paper-dialog::shadow #scroller {
+    height: 450px;
+    width: 450px;
+}
+
+paper-input{
+    width: 300px;
 }

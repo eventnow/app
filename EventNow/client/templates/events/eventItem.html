@@ -1,9 +1,20 @@
 <template name="eventItem">
 	<div class="event">
+		<img src="../images/eventnowwp.png" width="150" height="100" alt="" class="eventimg"/>
 		<div class="event-content">
-			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+
+			<span>
+
+				<a href="{{url}}">{{title}}</a>
+				<br/>
+				<span>{{description}}</span></span>
+				<br />
+				<span>veranstaltet von: {{host}}</span>
+				{{#if ownEvent}}<a href="{{pathFor 'editEvent'}}">Event bearbeiten</a>{{/if}}
+				
+			</div>
+			<paper-button raised class="join-btn"><core-icon icon="check"></core-icon>
+				<a href="{{pathFor 'eventDetails'}}">Join in</a></paper-button>
+
 		</div>
-		<paper-button raised><core-icon icon="check"></core-icon>
-  		<a href="{{pathFor 'eventDetails'}}">Join in</a></paper-button>
-	</div>
-</template>
+	</template>

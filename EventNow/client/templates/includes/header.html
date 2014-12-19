@@ -1,5 +1,43 @@
 <template name="header">
-<core-header-panel navigation flex mode="seamed">
+  
+
+  <core-header-panel drawer>
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+    <core-menu selected="0">
+      <core-item label="Home" icon="home"><a href="{{pathFor 'eventList'}}"></a></core-item>
+          <core-item label="Team" icon="bug-report"></core-item>
+          <core-item label="About" icon="account-circle"></core-item>
+          {{#if currentUser}}<core-item label="Neues Event erstellen" icon="create"> <a href="{{pathFor 'submitEvent'}}"></a></core-item>{{/if}}
+    </core-menu>
+    
+   </core-header-panel>
+
+  <core-header-panel main>
+    <core-toolbar id="mainheader">
+      <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+      <span flex>Eventnow</span>
+       <span flex>{{> imageupload}}</span>
+      
+          <paper-icon-button icon="account-circle" raised label="User" id="userlogin" onclick="document.querySelector('#user').toggle()"></paper-icon-button>
+          <paper-dialog backdrop id="user" heading="Login" transition="paper-dialog-transition-center">
+          <p>{{> account_system}}</p>
+          </paper-dialog>
+      
+    </core-toolbar>
+    <div class="content">
+      {{> yield}}
+       
+    </div>
+  </core-header-panel>
+
+
+
+</template>
+
+<!-- <core-header-panel navigation flex mode="seamed">
     <core-toolbar id="navheader">
       <span>Menu</span>
     </core-toolbar>
@@ -11,8 +49,11 @@
       <core-item label="About"></core-item>
     
     </core-menu>
+
+   {{#if currentUser}} <a href="{{pathFor 'submitEvent'}}">Neues Event erstellen</a>{{/if}}
     
     
   </core-header-panel>
-  {{> loginButtons}}
-</template>
+  {{> account_system}}
+
+  -->
