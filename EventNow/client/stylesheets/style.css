@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+* {
+  color: #212121;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  
+}
+core-icon[icon="favorite"] {
+  color: #f50057;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+}
+core-header-panel {
+  background: #80CBC4;
+
+}
+core-toolbar {
+  background-color: #01579B;
+
+}
+#navheader{
+  background-color: #039BE5;
+}
+#tabs {
+  width: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+  background-color: #0d47a1;
+}
+
+paper-tabs #selectionBar {
+  background-color: #00b0ff;
+  padding-bottom: 1px;
+}
+paper-tab #ink {
+  color: #00b0ff;
+}
+.content {
+  font-size: 12px;
+  background-color: #616161;
+
+}
+.event{
+  overflow: auto;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-bottom: solid #039BE5 1px;
+}
+
+.event-title {
+  font-size: 20pt;
+}
+
+.eventimg {
+  float: left;
+  margin-top: 12px;
+  margin-right: 20px;
+}
+
+.join-btn {
+  float: right;
+  background-color: #ffab00;
+  margin-top: 15px;
+} 
+
+.upvote-btn {
+  background-color: #4CAF50;
+  margin-top: 15px;
+}
+.comment-btn {
+  background-color: #CDDC39;
+  margin-top: 15px;
+}
+
+.comments {
+  list-style: none;
+}
+
+.event-content {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.signIn {
+  margin: 20px;
+}
+core-drawer-panel:not([narrow]) #navicon {
+  display: none;
+}
+
+html /deep/ paper-dialog::shadow #scroller {
+  height: 450px;
+  width: 450px;
+}
+
+paper-input{
+  width: 300px;
+}
+.eventimg{
+  height: 120px;
+  width: 120px;
+
+}
+
+.load-more {
+  display: block;
+  border-radius: 3px;
+  background: #FFCA28;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.load-more:hover {
+  text-decoration: none;
+  background: #E65100;
+}

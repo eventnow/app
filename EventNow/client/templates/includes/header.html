@@ -1,0 +1,45 @@
+<template name="header">
+  
+
+  <core-header-panel drawer>
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+    <core-menu selected="0">
+      <core-item label="Home" icon="home"><a href="{{pathFor 'home'}}"></a></core-item>
+          <core-item label="Team" icon="bug-report"></core-item>
+          <core-item label="About" icon="account-circle"></core-item>
+          {{#if currentUser}}<core-item label="Neues Event erstellen" icon="create"> <a href="{{pathFor 'submitEvent'}}"></a></core-item>{{/if}}
+     <!--     <span>{{> imgUpload}}</span>
+          <span>{{> imageView}}</span> -->
+         <span> <a href="{{pathFor 'newEvents'}}">New</a>
+          <a href="{{pathFor 'bestEvents'}}">Best</a>
+</span>
+
+
+    </core-menu>
+    
+   </core-header-panel>
+
+  <core-header-panel main>
+    <core-toolbar id="mainheader">
+      <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+      <span flex>EventNow</span>      
+          <paper-icon-button icon="account-circle" raised label="User" id="userlogin" onclick="document.querySelector('#user').toggle()"></paper-icon-button>
+          <paper-dialog backdrop id="user" heading="Login" transition="paper-dialog-transition-center">
+          <p>{{> account_system}}</p>
+          </paper-dialog>
+     
+    </core-toolbar>
+
+     
+    <div class="content">
+      {{> yield}}
+    </div>
+  </core-header-panel>
+
+
+
+</template>
+

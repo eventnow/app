@@ -1,0 +1,17 @@
+<template name="eventList">
+	<div class="eventPosts">
+		
+		{{#each eventPosts}}
+			{{> eventItem}}
+		{{/each}}
+
+	{{#if nextPath}}
+<a class="load-more" href="{{nextPath}}">mehr</a>
+	{{else}}
+	 {{#unless ready}}
+        {{>spinner}}
+      {{/unless}}
+	{{/if}}
+		
+	</div>
+</template>

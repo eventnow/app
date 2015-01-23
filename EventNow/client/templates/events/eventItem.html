@@ -1,0 +1,33 @@
+<template name="eventItem">
+	<div class="event">
+		<img src="../images/party.jpg" width="100" height="97" alt="" class="eventimg"/>
+		<div class="event-content">
+
+
+			<span>
+
+				<a href="{{url}}" class="event-title">{{title}}</a>
+				<br/>
+				<span>{{description}}</span></span>
+				<br />
+				
+				<span>veranstaltet von: {{author}}</span>
+
+				{{#if ownEvent}}<a href="{{pathFor 'editEvent'}}">Event bearbeiten</a>{{/if}}
+
+				
+			</div>
+			<paper-button raised {{upvotedClass}} class="upvote-btn" ><core-icon icon="thumb-up"></core-icon>
+
+			<a href="#" class="upvotable">Votes</a>: {{votes}}
+			</paper-button>
+
+			<paper-button raised class="comment-btn"><core-icon icon="question-answer"></core-icon>
+			<a href="{{pathFor 'eventDetails'}}">{{commentsCount}} comments</a>
+			</paper-button>
+			
+			<paper-button raised class="join-btn"><core-icon icon="check"></core-icon>
+				<a href="{{pathFor 'eventDetails'}}">Join in</a></paper-button>
+
+		</div>
+	</template>
